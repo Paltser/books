@@ -4,7 +4,7 @@ subbtn.addEventListener("click", addbook)
 
 let table = document.getElementById('books')
 
-function addbook(e) {
+function addbook(e)  {
     let row = table.insertRow(-1)
     let cell1 = row.insertCell(0)
     let cell2 = row.insertCell(1)
