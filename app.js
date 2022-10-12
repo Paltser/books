@@ -1,6 +1,8 @@
 const subbtn = document.getElementById('subbtn')
+const taskList = document.querySelector('table')
 
 subbtn.addEventListener("click", addbook)
+taskList.addEventListener('click', deleteBook)
 
 let table = document.getElementById('books')
 
@@ -19,4 +21,13 @@ function addbook(e) {
     a.className = 'blue-text text-darken-2 secondary-content'
     a.setAttribute('href', '#')
     cell4.appendChild(a)
+}
+
+function deleteBook(e){
+    if(e.target.textContent === 'X'){
+        if(confirm('Are you sure to delete this task?')){
+            e.target.parentElement.parentNode.remove()
+
+        }
+    }
 }
