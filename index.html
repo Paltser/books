@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Books</title>
-    <link rel="stylesheet" href="app.js">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+
+
 </head>
 <body>
     <div class="add-book">
@@ -12,7 +16,7 @@
             <h2>Title</h2>
         </div>
         <div>
-            <input type="text" id="task">
+            <input type="text" id="Title">
         </div>
         <div>
             <h2>Author</h2>
@@ -27,31 +31,31 @@
             <input type="text" id="ISBN#">
         </div>
         <div>
-            <input type="submit" class="btn">
+            <input type="submit" class="btn" id="subbtn">
         </div>
     </div>
 <div class="table">
-    <table style="padding: 20px">
-        <tr style="padding: 20px">
-            <th style="padding: 20px" >Title</th>
-            <th style="padding: 20px" >Author</th>
-            <th style="padding: 20px" >ISBN#</th>
-            <th style="padding: 20px">Remove</th>
+    <table id="books">
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN#</th>
+            <th>Remove</th>
         </tr>
         <tr>
-            <td style="padding: 20px">Tõde ja õigus</td>
-            <td style="padding: 20px">A.H Tammsaare</td>
-            <td style="padding: 20px">123789</td>
-            <td style="padding: 20px" ><a href="#" class="btn-del">X</a></td>
+            <td>Tõde ja õigus</td>
+            <td>A.H Tammsaare</td>
+            <td>123789</td>
+            <td><a href="#" class="btn-del">X</a></td>
         </tr>
         <tr>
-            <td style="padding: 20px">naksitrallid</td>
-            <td style="padding: 20px">eno roud</td>
-            <td style="padding: 20px">123788</td>
-            <td style="padding: 20px"><a href="#" class="btn-del">X</a></td>
+            <td>naksitrallid</td>
+            <td>eno roud</td>
+            <td>123788</td>
+            <td><a href="#" class="btn-del" id="delbtn">X</a></td>
         </tr>
     </table>
 </div>
-
+    <script src="app.js"></script>
 </body>
 </html>
