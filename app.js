@@ -1,5 +1,9 @@
 const subbtn = document.getElementById('subbtn')
 const taskList = document.querySelector('table')
+const InPutT = document.getElementById('Title')
+const InPutA= document.getElementById('Author')
+const InPutI= document.getElementById('ISBN#')
+
 
 subbtn.addEventListener("click", addbook)
 taskList.addEventListener('click', deleteBook)
@@ -21,6 +25,8 @@ function addbook(e) {
     a.className = 'blue-text text-darken-2 secondary-content'
     a.setAttribute('href', '#')
     cell4.appendChild(a)
+    addBookLS(InPutT.value, InPutA.value, InPutI.value)
+
 }
 
 function deleteBook(e){
@@ -30,4 +36,16 @@ function deleteBook(e){
 
         }
     }
+}
+
+function addBookLS(title, author, isbn) {
+    let books
+    if(localStorage.getItem('books') === null){
+        books = []
+    } else {
+        books = JSON.parse(localStorage.getItem('books'))
+    }
+    let book = [title, author, isbn]
+    books.push(book)
+    localStorage.setItem('books', JSON.stringify(books))
 }
