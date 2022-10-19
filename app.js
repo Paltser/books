@@ -74,7 +74,7 @@ function addBookLS(title, author, isbn) {
     books.push(book)
     localStorage.setItem('books', JSON.stringify(books))
 }
-function getBooks(){
+function getBooks() {
     let books
     if(localStorage.getItem('books') === null){
         books = []
